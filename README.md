@@ -12,7 +12,7 @@ When running pipeline on the clusters, transfer the following files
 - wgcna.sh
 - wgcna.sub
 
-On the cluster
+On the cluster  
 1) make a separate directory called wgcna/  
 2) make a separate directory called node_files/ inside the wgcna/ directory  
 3) transfer all R, Rdata, csv files into node_files/ directory  
