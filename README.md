@@ -1,6 +1,7 @@
 # Running the WGCNA Pipeline
 
 For example of running on our server: see REACTIVE_HDMP_NETWORKS
+
 For example of running on clusters: see INDIVIDUAL_NETWORKS or ChickMungeretal2016
 
 If the number of probes is large > 4000, then need to run code separately on the clusters
