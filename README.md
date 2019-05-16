@@ -1,31 +1,31 @@
 # Generate R tarball for upload to condor
 * Go to Interactive Condor and do the following:
 
-[John@build]$ tar -xzf R-3.6.0.tar.gz
-[John@build]$ cd R-3.6.0
-[John@build]$ ./configure --prefix=$(pwd)
-[John@build]$ make
-[John@build]$ make install
-[John@build]$ cd ..
+1. [John@build]$ tar -xzf R-3.6.0.tar.gz
+2. [John@build]$ cd R-3.6.0
+3. [John@build]$ ./configure --prefix=$(pwd)
+4. [John@build]$ make
+5. [John@build]$ make install
+6. [John@build]$ cd ..
 
 * Open R program in condor:
 
-[John@build]$ R-3.6.0/lib64/R/bin/R 
+7. [John@build]$ R-3.6.0/lib64/R/bin/R 
  > install.packages('package_name')   ...... 
- [needed packages names in library.txt file, RODBC is not availabe since it needs sudo authoriaty]
+   (needed packages names in library.txt file, RODBC is not availabe since it needs sudo authoriaty)
  
  exit the R
  > q()   
   
 * change RHOME directory
-[John@build]$ nano R-3.6.0/lib64/R/bin/R
+8. [John@build]$ nano R-3.6.0/lib64/R/bin/R
 
 change from : R_HOME_DIR=/var/lib/condor/execute/slot1/dir_554715/R-3.1.0/lib64/R
 change to: R_HOME_DIR=$(pwd)/R
 
-[John@build]$ mv R-3.6.0/lib64/R ./
-[John@build]$ tar -czvf R.tar.gz R/
-[John@build]$ exit 
+9.  [John@build]$ mv R-3.6.0/lib64/R ./
+10. [John@build]$ tar -czvf R.tar.gz R/
+11. [John@build]$ exit 
 
 * The R.tar.gz will be transfered back to home directory after exit condor
 
