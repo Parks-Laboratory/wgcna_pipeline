@@ -1,3 +1,35 @@
+# Generate R tarball for upload to condor
+* Go to Interactive Condor and do the following:
+
+[John@build]$ tar -xzf R-3.6.0.tar.gz
+[John@build]$ cd R-3.6.0
+[John@build]$ ./configure --prefix=$(pwd)
+[John@build]$ make
+[John@build]$ make install
+[John@build]$ cd ..
+
+* Open R program in condor:
+
+[John@build]$ R-3.6.0/lib64/R/bin/R 
+ > install.packages('package_name')   ...... 
+ [needed packages names in library.txt file, RODBC is not availabe since it needs sudo authoriaty]
+ 
+ exit the R
+ > q()   
+  
+* change RHOME directory
+[John@build]$ nano R-3.6.0/lib64/R/bin/R
+
+change from : R_HOME_DIR=/var/lib/condor/execute/slot1/dir_554715/R-3.1.0/lib64/R
+change to: R_HOME_DIR=$(pwd)/R
+
+[John@build]$ mv R-3.6.0/lib64/R ./
+[John@build]$ tar -czvf R.tar.gz R/
+[John@build]$ exit 
+
+* The R.tar.gz will be transfered back to home directory after exit condor
+
+
 # Running the WGCNA Pipeline
 
 For example of running on our server: see REACTIVE_HDMP_NETWORKS  
