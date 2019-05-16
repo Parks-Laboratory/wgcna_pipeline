@@ -28,6 +28,7 @@ change to: R_HOME_DIR=$(pwd)/R
 11. [John@build]$ exit 
 
 * The R.tar.gz will be transfered back to home directory after exit condor
+* R.tar.gz (with all necessary libraries for WGCNA) is in E:/condor_tools
 
 
 # Running the WGCNA Pipeline
