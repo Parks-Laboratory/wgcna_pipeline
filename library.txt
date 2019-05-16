@@ -1,0 +1,17 @@
+library(optparse)
+library(stringr)
+library(reshape2)
+library(plyr)
+library(dplyr)
+library(tidyr)
+library(data.table)
+library (robust)
+
+library(WGCNA)
+library(sqldf)
+library(RODBC)
+
+libarry (BiocManager)
+BiocManager::install('impute')
+BiocManager::install('preprocessCore')
+BiocManager::install('GO.db')
