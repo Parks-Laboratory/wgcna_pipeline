@@ -6,10 +6,11 @@ library(dplyr)
 library(tidyr)
 library(data.table)
 library (robust)
+library(flashClust)
 
 library(WGCNA)
-library(sqldf)
-library(RODBC)
+* library(sqldf)
+* library(RODBC)
 
 libarry (BiocManager)
 BiocManager::install('impute')
