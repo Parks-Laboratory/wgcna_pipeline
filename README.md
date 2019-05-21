@@ -16,7 +16,34 @@
 7. [John@build]$ R-3.6.0/lib64/R/bin/R 
  > install.packages('package_name')   ...... 
    (needed packages names in library.txt file, RODBC is not availabe since it needs sudo authoriaty)
- 
+
+source("http://bioconductor.org/biocLite.R")
+biocLite(ask = FALSE)
+biocLite(c("AnnotationDbi", "impute", "GO.db", "preprocessCore"), ask = FALSE) 
+biocLite("org.Mm.eg.db")
+biocLite("BiocGenerics")
+biocLite("S4Vectors")
+
+
+install.packages("parallel")
+install.packages("stats4")
+
+install.packages("plyr")
+install.packages("dplyr")
+install.packages("tidyr")
+install.packages("stringr")
+install.packages("magrittr")
+install.packages("reshape2")
+install.packages("data.table")
+install.packages("optparse")
+install.packages("WGCNA")
+install.packages("flashClust")
+
+### packages for meta analysis:
+
+install.packages (c("dynamicTreeCut","qvalue","Hmisc"))
+
+
  exit the R
  > q()   
   
