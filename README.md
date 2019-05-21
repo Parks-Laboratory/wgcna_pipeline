@@ -3,7 +3,10 @@
 
 1. [John@build]$ tar -xzf R-3.6.0.tar.gz
 2. [John@build]$ cd R-3.6.0
-3. [John@build]$ ./configure --prefix=$(pwd)
+3. [John@build]$ ./configure --with-recommended-packages=no --without-x --with-cairo --with-libpng --with-libtiff --with-jpeglib --enable-R-shlib--prefix=$(pwd)   
+
+// if not enable cairo, png function can not work in wgcna
+
 4. [John@build]$ make
 5. [John@build]$ make install
 6. [John@build]$ cd ..
