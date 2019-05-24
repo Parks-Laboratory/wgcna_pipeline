@@ -9,6 +9,7 @@ library (robust)
 install.packages("flashClust")
 library(WGCNA)
 library(sqldf)
+library(RODBC)
 
 repo <- "http://cran.us.r-project.org"
 source("http://bioconductor.org/biocLite.R")
