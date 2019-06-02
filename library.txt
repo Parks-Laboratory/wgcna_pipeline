@@ -19,6 +19,8 @@ BiocManager::install('preprocessCore')
 BiocManager::install('GO.db')
 BiocManager::install('AnnotationDbi.db')
 BiocManager::install('org.Mm.eg.db')
+BiocManager::install('BiocGenerics')
+BiocManager::install('S4Vectors')
 
 
 repo <- "http://cran.us.r-project.org"
