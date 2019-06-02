@@ -18,6 +18,7 @@ BiocManager::install('impute')
 BiocManager::install('preprocessCore')
 BiocManager::install('GO.db')
 BiocManager::install('AnnotationDbi.db')
+BiocManager::install('org.Mm.eg.db')
 
 
 repo <- "http://cran.us.r-project.org"
